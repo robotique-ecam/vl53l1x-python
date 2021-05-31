@@ -211,7 +211,7 @@ int32_t getDistance(VL53L1_Dev_t *dev)
 {
     VL53L1_Error Status = VL53L1_ERROR_NONE;
     int32_t current_distance = -1;
-    Status = VL53L1_WaitMeasurementDataReady(dev);
+    //Status = VL53L1_WaitMeasurementDataReady(dev);
     Status = VL53L1_GetRangingMeasurementData(dev, pRangingMeasurementData);
     current_distance = pRangingMeasurementData->RangeMilliMeter;
     VL53L1_ClearInterruptAndStartMeasurement(dev);
