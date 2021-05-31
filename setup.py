@@ -2,7 +2,7 @@ from setuptools import setup, Extension
 
 extension = Extension(
     'vl53l1x_python',
-    define_macros=[],
+    define_macros=[('DEBUG', None), ('USE_I2C_2V8', None)],
     extra_compile_args=['-std=c99'],
     include_dirs=['.', 'api/core', 'api/platform'],
     libraries=[],
